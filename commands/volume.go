@@ -55,7 +55,10 @@ func (c *VolumeCommand) Execute(user *gumble.User, args ...string) (string, bool
 		return "", true, errors.New(viper.GetString("commands.volume.messages.parsing_error"))
 	}
 
-	if newVolume < viper.GetFloat64("volume.lowest") || newVolume > viper.GetFloat64("volume.highest") {
+	minVolume := viper.GetFloat64("volume.lowest") * 1.001
+	maxVolume := viper.GetFloat64("volume.highest") * 1.001
+
+	if newVolume < minVolume || newVolume > maxVolume {
 		return "", true, fmt.Errorf(viper.GetString("commands.volume.messages.out_of_range_error"),
 			viper.GetFloat64("volume.lowest"), viper.GetFloat64("volume.highest"))
 	}
