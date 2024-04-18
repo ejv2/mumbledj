@@ -1,17 +1,17 @@
-package: github.com/matthieugrieger/mumbledj
-homepage: https://github.com/matthieugrieger/mumbledj
+package: github.com/ejv2/mumbledj
+homepage: https://github.com/ejv2/mumbledj
 license: MIT
 owners:
 - name: Matthieu Grieger
-  email: me@matthieugrieger.com
-  homepage: https://matthieugrieger.com
+  email: me@ejv2.com
+  homepage: https://ejv2.com
 import:
 - package: github.com/ChannelMeter/iso8601duration
-- package: github.com/Sirupsen/logrus
+- package: github.com/sirupsen/logrus
   version: v0.10.0
 - package: github.com/antonholmquist/jason
   version: v1.0.0
-- package: github.com/layeh/gumble
+- package: layeh.com/gumble
   subpackages:
   - gumble
   - gumbleffmpeg

@@ -12,10 +12,10 @@ import (
 	"os"
 	"strings"
 
-	"github.com/Sirupsen/logrus"
-	"github.com/matthieugrieger/mumbledj/bot"
-	"github.com/matthieugrieger/mumbledj/commands"
-	"github.com/matthieugrieger/mumbledj/services"
+	"github.com/sirupsen/logrus"
+	"github.com/ejv2/mumbledj/bot"
+	"github.com/ejv2/mumbledj/commands"
+	"github.com/ejv2/mumbledj/services"
 	"github.com/spf13/viper"
 	"github.com/urfave/cli"
 )

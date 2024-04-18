@@ -19,7 +19,7 @@ MumbleDJ Changelog
 * Fixed an index out of range crash in the queue skipping function.
 
 ### July 11, 2016 -- `v3.1.1`
-* Updated vendored dependencies to hopefully address the following issue: https://github.com/matthieugrieger/mumbledj/issues/169.
+* Updated vendored dependencies to hopefully address the following issue: https://github.com/ejv2/mumbledj/issues/169.
 
 ### July 10, 2016 -- `v3.1.0`
 * File path for user `p12` certificate can now be provided for authenticating as a registered user via the `--p12` commandline flag or the `connection.user_p12` configuration value.
@@ -173,7 +173,7 @@ I hope you guys enjoy this update, it has been in the works for a few months. :)
 * Fixed a bug in which a duration of 0:00 was shown for songs that were less than a minute long.
 
 ### April 17, 2015 -- `v2.7.0`
-* Migrated all YouTube API calls to YouTube Data API v3. This means that you **MUST** follow the instructions in the following link if you were using a previous version of MumbleDJ: https://github.com/matthieugrieger/mumbledj#youtube-api-keys.
+* Migrated all YouTube API calls to YouTube Data API v3. This means that you **MUST** follow the instructions in the following link if you were using a previous version of MumbleDJ: https://github.com/ejv2/mumbledj#youtube-api-keys.
 * Made the SongQueue much more flexible. These changes will allow easy addition of support for other music services.
 
 ### March 28, 2015 -- `v2.6.10`
@@ -304,7 +304,7 @@ config files.
 ### December 27, 2014 -- `v2.0.0, v2.1.0, v2.1.1`
 * Reached feature parity with old version of MumbleDJ.
 * Bot is now written completely in Golang instead of Lua and Python.
-* Now uses [`gumble`](https://github.com/layeh/gumble) for interacting with Mumble instead of [`piepan`](https://github.com/layeh/piepan).
+* Now uses [`gumble`](https://layeh.com/gumble) for interacting with Mumble instead of [`piepan`](https://github.com/layeh/piepan).
 * Stability improved in many areas.
 * Audio quality is slightly better due to using higher bitrate m4a files instead of Ogg Vorbis.
 * All YouTube URLs should be supported now.

@@ -1,7 +1,7 @@
 
 <h1 align="center">MumbleDJ</h1>
 <p align="center"><b>A Mumble bot that plays audio fetched from various media websites.</b></p>
-<p align="center"><a href="https://travis-ci.org/matthieugrieger/mumbledj"><img src="https://travis-ci.org/matthieugrieger/mumbledj.svg?branch=master"/></a> <a href="https://raw.githubusercontent.com/matthieugrieger/mumbledj/master/LICENSE"><img src="https://img.shields.io/badge/license-MIT-blue.svg"/></a> <a href="https://github.com/matthieugrieger/mumbledj/releases"><img src="https://img.shields.io/github/release/matthieugrieger/mumbledj.svg"/></a> <a href="https://goreportcard.com/report/github.com/matthieugrieger/mumbledj"><img src="https://goreportcard.com/badge/github.com/matthieugrieger/mumbledj"/></a> <a href="https://codecov.io/gh/matthieugrieger/mumbledj"><img src="https://img.shields.io/codecov/c/github/matthieugrieger/mumbledj.svg"/></a> <a href="https://gitter.im/matthieugrieger/mumbledj"><img src="https://img.shields.io/gitter/room/matthieugrieger/mumbledj.svg" /></a></p>
+<p align="center"><a href="https://travis-ci.org/ejv2/mumbledj"><img src="https://travis-ci.org/matthieugrieger/mumbledj.svg?branch=master"/></a> <a href="https://raw.githubusercontent.com/matthieugrieger/mumbledj/master/LICENSE"><img src="https://img.shields.io/badge/license-MIT-blue.svg"/></a> <a href="https://github.com/matthieugrieger/mumbledj/releases"><img src="https://img.shields.io/github/release/matthieugrieger/mumbledj.svg"/></a> <a href="https://goreportcard.com/report/github.com/matthieugrieger/mumbledj"><img src="https://goreportcard.com/badge/github.com/matthieugrieger/mumbledj"/></a> <a href="https://codecov.io/gh/matthieugrieger/mumbledj"><img src="https://img.shields.io/codecov/c/github/matthieugrieger/mumbledj.svg"/></a> <a href="https://gitter.im/matthieugrieger/mumbledj"><img src="https://img.shields.io/gitter/room/matthieugrieger/mumbledj.svg" /></a></p>
 
 <p align="center"><b>Unfortunately, this project is no longer maintained. Don't expect any responses on bug reports, feature requests, etc. Forks are welcome!</b></p>
 
@@ -75,7 +75,7 @@ A SoundCloud client ID must be present in your configuration file in order to us
 ### Via `go get` (recommended)
 After verifying that the [requirements](#requirements) are installed, simply issue the following command:
 ```
-go get -u github.com/matthieugrieger/mumbledj
+go get -u github.com/ejv2/mumbledj
 ```
 
 This should place a binary in `$GOPATH/bin` that can be used to start the bot.
@@ -88,12 +88,12 @@ export GO15VENDOREXPERIMENT=1
 ### Pre-compiled Binaries (easiest)
 Pre-compiled binaries are provided for convenience. Overall, I do not recommend using these unless you cannot get `go install` to work properly. Binaries compiled on your own machine are likely more efficient as these binaries are cross-compiled from a 64-bit Linux system.
 
-After verifying that the [requirements](#requirements) are installed, simply visit the [releases page](https://github.com/matthieugrieger/mumbledj/releases) and download the appropriate binary for your platform.
+After verifying that the [requirements](#requirements) are installed, simply visit the [releases page](https://github.com/ejv2/mumbledj/releases) and download the appropriate binary for your platform.
 
 ### From Source
 First, clone the MumbleDJ repository to your machine:
 ```
-git clone https://github.com/matthieugrieger/mumbledj.git
+git clone https://github.com/ejv2/mumbledj.git
 ```
 
 Install the required software as described in the [requirements section](#requirements), and execute the following:
@@ -112,7 +112,7 @@ You can also use [Docker](https://www.docker.com) to run MumbleDJ.
 
 First you need to clone the MumbleDJ repository to your machine:
 ```
-git clone https://github.com/matthieugrieger/mumbledj.git
+git clone https://github.com/ejv2/mumbledj.git
 ```
 
 Assuming you have [Docker installed](https://www.docker.com/products/docker), you will have to build the image:
@@ -363,10 +363,10 @@ Keep in mind that values that contain commas (such as `"SuperUser,Matt"`) will b
 
 ## Contributing
 
-Contributions to MumbleDJ are always welcome! Please see the [contribution guidelines](https://github.com/matthieugrieger/mumbledj/blob/master/CONTRIBUTING.md) for instructions and suggestions!
+Contributions to MumbleDJ are always welcome! Please see the [contribution guidelines](https://github.com/ejv2/mumbledj/blob/master/CONTRIBUTING.md) for instructions and suggestions!
 
 ## Author
-[Matthieu Grieger](https://github.com/matthieugrieger)
+[Matthieu Grieger](https://github.com/ejv2)
 
 ## License
 ```
@@ -395,12 +395,12 @@ THE SOFTWARE.
 
 ## Thanks
 * [All those who contribute to Mumble](https://github.com/mumble-voip/mumble/graphs/contributors)
-* [Tim Cooper](https://github.com/bontibon) for [gumble, gumbleffmpeg, and gumbleutil](https://github.com/layeh/gumble)
+* [Tim Cooper](https://github.com/bontibon) for [gumble, gumbleffmpeg, and gumbleutil](https://layeh.com/gumble)
 * [Jeremy Saenz](https://github.com/codegangsta) for [cli](https://github.com/urfave/cli)
 * [Anton Holmquist](https://github.com/antonholmquist) for [jason](https://github.com/antonholmquist/jason)
 * [Stretchr, Inc.](https://github.com/stretchr) for [testify](https://github.com/stretchr/testify)
 * [ChannelMeter](https://github.com/ChannelMeter) for [iso8601duration](https://github.com/ChannelMeter/iso8601duration)
 * [Steve Francia](https://github.com/spf13) for [viper](https://github.com/spf13/viper)
-* [Simon Eskildsen](https://github.com/Sirupsen) for [logrus](https://github.com/Sirupsen/logrus)
+* [Simon Eskildsen](https://github.com/sirupsen) for [logrus](https://github.com/Sirupsen/logrus)
 * [Mitchell Hashimoto](https://github.com/mitchellh) for [gox](https://github.com/mitchellh/gox)
 * [Jim Teeuwen](https://github.com/jteeuwen) for [go-bindata](https://github.com/jteeuwen/go-bindata)

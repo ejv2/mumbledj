@@ -10,7 +10,7 @@ package commands
 import (
 	"testing"
 
-	"github.com/matthieugrieger/mumbledj/bot"
+	"github.com/ejv2/mumbledj/bot"
 	"github.com/spf13/viper"
 	"github.com/stretchr/testify/suite"
 )

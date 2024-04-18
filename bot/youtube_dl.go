@@ -12,8 +12,8 @@ import (
 	"os"
 	"os/exec"
 
-	"github.com/Sirupsen/logrus"
-	"github.com/matthieugrieger/mumbledj/interfaces"
+	"github.com/sirupsen/logrus"
+	"github.com/ejv2/mumbledj/interfaces"
 	"github.com/spf13/viper"
 )
 

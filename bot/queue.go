@@ -15,9 +15,9 @@ import (
 	"sync"
 	"time"
 
-	"github.com/layeh/gumble/gumbleffmpeg"
-	_ "github.com/layeh/gumble/opus"
-	"github.com/matthieugrieger/mumbledj/interfaces"
+	"layeh.com/gumble/gumbleffmpeg"
+	_ "layeh.com/gumble/opus"
+	"github.com/ejv2/mumbledj/interfaces"
 	"github.com/spf13/viper"
 )
 

@@ -26,7 +26,7 @@ imports:
   - json/token
 - name: github.com/layeh/gopus
   version: 867541549ca5f8b4db2b92fd1dded8711256a27d
-- name: github.com/layeh/gumble
+- name: layeh.com/gumble
   version: f0a4a2992fa9a969ef90d673374bc63a9b7948ad
   subpackages:
   - gumble
@@ -39,7 +39,7 @@ imports:
   version: e2f061ecfdaca9f35b2e2c12346ffc526f138137
 - name: github.com/mitchellh/mapstructure
   version: d2dd0262208475919e1a362f675cfc0e7c10e905
-- name: github.com/Sirupsen/logrus
+- name: github.com/sirupsen/logrus
   version: 4b6ea7319e214d98c938f12692336f7ca9348d6b
 - name: github.com/spf13/cast
   version: 27b586b42e29bec072fe7379259cc719e1289da6
