@@ -22,6 +22,14 @@ func SetDefaultConfig() {
 	viper.SetDefault("api_keys.youtube", "")
 	viper.SetDefault("api_keys.soundcloud", "")
 
+	// Library system defaults.
+	// NOTE: Extension set to "" implies no extension at all
+	viper.SetDefault("libraries.enable", false)
+	viper.SetDefault("libraries.enable_playlists", false)
+	viper.SetDefault("libraries.extensions", []string{"mp3", "wav", "ogg", "webm"})
+	viper.SetDefault("libraries.playlist_extensions", []string{"txt", ""})
+	viper.SetDefault("libraries.folders", []string{})
+
 	// General defaults.
 	viper.SetDefault("defaults.comment", "Hello! I am a bot. Type !help for a list of commands.")
 	viper.SetDefault("defaults.channel", "")

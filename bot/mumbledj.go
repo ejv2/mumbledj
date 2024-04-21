@@ -18,12 +18,12 @@ import (
 	"strings"
 	"time"
 
+	"github.com/ejv2/mumbledj/interfaces"
 	"github.com/sirupsen/logrus"
+	"github.com/spf13/viper"
 	"layeh.com/gumble/gumble"
 	"layeh.com/gumble/gumbleffmpeg"
 	"layeh.com/gumble/gumbleutil"
-	"github.com/ejv2/mumbledj/interfaces"
-	"github.com/spf13/viper"
 )
 
 // MumbleDJ is a struct that keeps track of all aspects of the bot's state.
@@ -35,6 +35,7 @@ type MumbleDJ struct {
 	AudioStream       *gumbleffmpeg.Stream
 	Queue             interfaces.Queue
 	Cache             *Cache
+	Libraries         []Library
 	Skips             interfaces.SkipTracker
 	Commands          []interfaces.Command
 	Version           string
@@ -55,6 +56,7 @@ func NewMumbleDJ() *MumbleDJ {
 		TLSConfig:         new(tls.Config),
 		Queue:             NewQueue(),
 		Cache:             NewCache(),
+		Libraries:         make([]Library, 0),
 		Skips:             NewSkipTracker(),
 		Commands:          make([]interfaces.Command, 0),
 		YouTubeDL:         new(YouTubeDL),

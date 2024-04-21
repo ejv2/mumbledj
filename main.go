@@ -12,10 +12,10 @@ import (
 	"os"
 	"strings"
 
-	"github.com/sirupsen/logrus"
 	"github.com/ejv2/mumbledj/bot"
 	"github.com/ejv2/mumbledj/commands"
 	"github.com/ejv2/mumbledj/services"
+	"github.com/sirupsen/logrus"
 	"github.com/spf13/viper"
 	"github.com/urfave/cli"
 )
@@ -175,6 +175,37 @@ func main() {
 		}
 		if c.GlobalIsSet("insecure") {
 			viper.Set("connection.insecure", c.Bool("insecure"))
+		}
+
+		// Load local libraries.
+		if viper.GetBool("libraries.enable") {
+			// If libraries are disabled, make the match space zero (so no extensions can match).
+			if !viper.GetBool("libraries.enable_playlists") {
+				viper.Set("libraries.playlist_extensions", []string{})
+			}
+
+			ext := viper.GetStringSlice("libraries.extensions")
+			pext := viper.GetStringSlice("libraries.playlist_extensions")
+
+			logrus.Infoln("Local libraries enabled. Loading from",
+				len(viper.GetStringSlice("libraries.folders")),
+				"locations with extensions", ext,
+				"and playlist extensions", pext,
+			)
+
+			ebuf := make([]string, 0)
+			for _, f := range viper.GetStringSlice("libraries.folders") {
+				lib, err := bot.NewLibrary(os.ExpandEnv(f), ext, pext)
+				if err != nil {
+					ebuf = append(ebuf, err.Error())
+				}
+
+				DJ.Libraries = append(DJ.Libraries, lib)
+			}
+
+			if len(ebuf) != 0 {
+				logrus.Fatalf("%d libraries failed to load:\n\t%s", len(ebuf), strings.Join(ebuf, "\n\t"))
+			}
 		}
 
 		if err := DJ.Connect(); err != nil {
